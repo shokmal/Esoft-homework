@@ -4,12 +4,14 @@ import viteLogo from "/vite.svg";
 // import "./App.css";
 import Profile from "./components/Profile";
 import HomePage from "./components/HomePage";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <HomePage />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/MyProfile" element={<Profile />} />
+    </Routes>
   );
 }
 

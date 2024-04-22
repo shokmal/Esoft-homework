@@ -1,7 +1,13 @@
 import { Box, Typography, Button, Container } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+  const handleNavigateProfile = async () => {
+    navigate("/MyProfile");
+  };
+
   return (
     <>
       <Container align="center">
@@ -28,10 +34,11 @@ export default function HomePage() {
           >
             Выбирите домашние задание
           </Typography>
-          <Button variant="contained" style={{ marginTop: 20 }}>
-            Домашка 1
-          </Button>
-          <Button variant="contained" style={{ marginTop: 20 }}>
+          <Button
+            variant="contained"
+            style={{ marginTop: 20 }}
+            onClick={handleNavigateProfile}
+          >
             Домашка 2
           </Button>
           <Button variant="contained" style={{ marginTop: 20 }}>
